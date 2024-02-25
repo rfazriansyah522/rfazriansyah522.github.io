@@ -35,7 +35,8 @@ ga('send', 'pageview');
 {% endif %}
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
-<body class="{{layout}}">
+<body class="{{layout}}" loading="lazy">
+	
 
 
 	
@@ -142,7 +143,7 @@ ga('send', 'pageview');
 
 <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css" />
 <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
-<video id="my-video" controls="" autoplay="" muted="" poster="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTo-LVS_k5LThCioxtby9u3d98vpDnJ4obozqQVY9A0tzqigK8_iF6KAN_JeC-Conn0N-DCDIJafioBHRMrbjffF_xztNGyHRcmHcAoQkLzHiKJ1ahSn2OCZp1LkiPtFzfz8jrxPM2aOodffOD9LEpdb65u6-CbUCMl6WIbxwSFf9No2NnEtUY5gDsR6Ok/s320/20240217_220452.png"> 
+<video id="my-video" width="100%" controls="" muted="" poster="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTo-LVS_k5LThCioxtby9u3d98vpDnJ4obozqQVY9A0tzqigK8_iF6KAN_JeC-Conn0N-DCDIJafioBHRMrbjffF_xztNGyHRcmHcAoQkLzHiKJ1ahSn2OCZp1LkiPtFzfz8jrxPM2aOodffOD9LEpdb65u6-CbUCMl6WIbxwSFf9No2NnEtUY5gDsR6Ok/s320/20240217_220452.png"> 
 <source src="https://github.com/fazriansyah11/henia6.github.io/raw/master/InShot_20240217_224859397.mp4" title="video" type="video/mp4"> </video>
 <script type="application/javascript">
     var testVideo = fluidPlayer(
