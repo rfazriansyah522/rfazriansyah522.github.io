@@ -124,7 +124,31 @@ ga('send', 'pageview');
 </div>
 -->
 	
-	<center style="height:250px; overflow:auto;" >
+	
+	
+	<a id="show_id" onclick="document.getElementById('spoiler_id').style.display=''; document.getElementById('show_id').style.display='none';"></a><span id="spoiler_id" style="display: none;"><a class="link" onclick="document.getElementById('spoiler_id').style.display='none'; document.getElementById('show_id').style.display='';"></a>
+<div style="background-color: rgba(0, 0, 0, 0); margin: 1px;">
+<div class="smallfont"><i><span style="font-size: 16px; font-weight: bold; margin-right: 3px;"></span></i><input onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Hide'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'new posts'; }" style="background-color: #00000000; font-size: 16px; width: auto;" type="button" value="new posts" />
+</div>
+<div class="alt2" style="background-color: rgba(255, 255, 255, 0); margin: 0px; padding: 0px;">
+<div style="display: none;" loading="lazy">
+
+
+
+
+</div></div></div></span>
+
+	
+	
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+	
+	
+    {{ content }}
+    
+    <center style="height:250px; overflow:auto;" >
 
 <script type="text/javascript">
 	atOptions = {
@@ -251,46 +275,18 @@ ga('send', 'pageview');
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="//evendisciplineseedlings.com/48761db0c749c8fd153cfa18a5f86793/invoke.js"></scr' + 'ipt>');
 </script>
-	
-	</center><br />
-	
-	<a id="show_id" onclick="document.getElementById('spoiler_id').style.display=''; document.getElementById('show_id').style.display='none';"></a><span id="spoiler_id" style="display: none;"><a class="link" onclick="document.getElementById('spoiler_id').style.display='none'; document.getElementById('show_id').style.display='';"></a>
-<div style="background-color: rgba(0, 0, 0, 0); margin: 1px;">
-<div class="smallfont"><i><span style="font-size: 16px; font-weight: bold; margin-right: 3px;"></span></i><input onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerText = ''; this.value = 'Hide'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'new posts'; }" style="background-color: #00000000; font-size: 16px; width: auto;" type="button" value="new posts" />
-</div>
-<div class="alt2" style="background-color: rgba(255, 255, 255, 0); margin: 0px; padding: 0px;">
-<div style="display: none;" loading="lazy">
-
-
-
-
-</div></div></div></span>
-
+	<br />
 	<div class="jontor" loading="lazy">
 <script src="https://rawgit.com/rezamuhamad/rakinfo/master/sitemap.js"></script>
 <script src="https://xselebgram.xyz/feeds/posts/default/?start-index=1&max-results=3230&amp;alt=json-in-script&amp;callback=rak_info_Load"></script>
 </div>
+	</center><br />
 	
-
-<!-- Content
-================================================== -->
-<div class="main-content">
-    {{ content }}
-    <!-- 🍓🥕🥕🥕🥕🥕🍓 -->
-
-
 	
-
-
-
-
-
- 
-
-
-
-    
-    <!-- 🍞🍞🌰🌰🥐🥐🥖🥖🥖🥖 -->
+	
+	
+	
+	
 </div>
 
 {% if site.mailchimp-list %}
@@ -383,4 +379,3 @@ ga('send', 'pageview');
 
 </body>
 </html>
-
