@@ -1,9 +1,9 @@
 # Site
 name: "NinggraIngga"
 title: "NinggraIngga"
-description: "My blog"
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+description: "my blog is my life"
+logo: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwXozB4b61nP7sTM6WovZO7Jiy6qSgPtWm1gs7wE6aSi5e1pitFghVvP2KWmuWJMmz2uFFxIdD5ETCYQF3ISo4e8YJlPOaNdgn_Awsix1EzwfQPaNKKWEuwBKqoXDEy3c3Af5Jea2Tk9iausT1oNnMmSx1G6w54bCrkP7cE9wNLOBjtwwiVjgo23M_g-8/s1600/logo.png'
+favicon: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwXozB4b61nP7sTM6WovZO7Jiy6qSgPtWm1gs7wE6aSi5e1pitFghVvP2KWmuWJMmz2uFFxIdD5ETCYQF3ISo4e8YJlPOaNdgn_Awsix1EzwfQPaNKKWEuwBKqoXDEy3c3Af5Jea2Tk9iausT1oNnMmSx1G6w54bCrkP7cE9wNLOBjtwwiVjgo23M_g-8/s1600/logo.png'
 baseurl: /
 google_analytics: 'UA-46278016-1'
 disqus: 'demowebsite'
