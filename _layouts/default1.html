@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+	
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,65 +18,7 @@
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 
-
-
-<style>
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin: 2rem 0;
-  width: 100%;
-}
-th, td {
-  padding: 1rem 1.5rem;
-  text-align: left;
-}
-th {
-  background-color: #008c5f; /* header background color */
-  color: #fff; /* header text color */
-  font-weight: 600;
-}
-tr {
-  padding: 0;
-}
-td {
-  vertical-align: middle;
-}
-tr:nth-child(even) td {
-  background-color: rgba(0, 0, 0, .075); /* striped background color */
-}
-@media screen and (max-width: 640px) {
-  thead, th {
-    display: none;
-  }
-  tr, td {
-    display: block;
-  }
-  tr {
-    border: 1px solid rgba(0, 0 , 0 ,.15);
-    margin-bottom: 2rem;
-  }
-  tr:last-child {
-    margin-bottom: 0;
-  }
-  tr:nth-child(even) td {
-    background-color: transparent;
-  }
-  td {
-    clear: both;
-    text-align: right;
-  }
-  td:before {
-    content: attr(data-label)': ';
-    float: left;
-    font-weight: bold;
-    margin-right: 1rem;
-  }
-}</style>
-	
-	
-<meta name="yandex-verification" content="eb02b88e0cf19b61" />
-
+<meta name="yandex-verification" content="2735eeafe8690652" />
 	
 </head>
 
@@ -92,24 +35,15 @@ ga('send', 'pageview');
 {% endif %}
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
-<body class="{{layout}}" >
-
-	    
-
-
-
-
-
-
-
-
-
-	    
+<body class="{{layout}}" loading="lazy">
 	
 
+
 	
-	
-	
+
+
+
+
 	
 	<!-- defer loading of font and font awesome -->
 	<noscript id="deferred-styles">
@@ -175,49 +109,100 @@ ga('send', 'pageview');
 
 <div class="container">
 
-<!-- ❤ ploating start ❤-->
-
-
-
-<!--❤ ploating end ❤-->
-
+<!-- Site Title
+================================================== -->
+<!-- <div class="mainheading">
+    <h1 class="sitetitle">{{ site.name }}</h1>
+    <p class="lead">
+        {{ site.description }}
+    </p>
+</div>
+-->
+	
+	
+	
+	
+	
 	
 
 <!-- Content
 ================================================== -->
 <div class="main-content">
+	
+	
     {{ content }}
 
+	
 
+</div>
+	
     
+	
+	
+	
+	
+
+
+{% if site.mailchimp-list %}
+<!-- Bottom Alert Bar
+================================================== -->
+<!-- <div class="alertbar">
+	<div class="container text-center">
+		<span><img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{site.title}}"> &nbsp; Never miss a <b>story</b> from us, subscribe to our newsletter</span>
+        <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
+            <div class="mc-field-group">
+            <input type="email" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL" autocomplete="on" required>
+            <input type="submit" value="Subscribe" name="subscribe" class="heart">
+            </div>
+        </form>
+	</div>
+</div> -->
+{% endif %}
     
-</div>    
 </div>
 
 
+<!-- Categories Jumbotron
+================================================== -->
+ <div class="jumbotron fortags" style="height:1px; overflow:auto;" >
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            {% assign categories_list = site.categories %}
+            {% if categories_list.first[0] == null %}
+                {% for category in categories_list %}
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} ({{ site.tags[category].size }})</a>
+                {% endfor %}
+            {% else %}
+                {% for category in categories_list %}
+                    <a class="mt-1 mb-1" href="{{site.baseurl}}/categories#{{ category[0] | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} ({{ category[1].size }})</a>
+                {% endfor %}
+            {% endif %}
+            {% assign categories_list = nil %}
+		</div>
+	</div>
+</div>
 	
- 
-
-	
-	
-	
-	
-
 
 <!-- Begin Footer
 ================================================== -->
 <footer class="footer">
     <div class="container">
-    
+     
 
-    
-        <div class="row">
+	    
+	
+    	    <div class="row">
             <div class="col-md-6 col-sm-6 text-center text-lg-left">
                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
-		    <br />Email: rfazriansyah376@gmail.com
+		    <br /> Email: rfazriansyah522@gmail.com
 		    
             </div>
-            
+            <br />
         </div>
     </div>
 </footer>
@@ -246,148 +231,142 @@ ga('send', 'pageview');
 {% endif %}
 
 
-
-
-
-
-
-
-
-
-
-
-
 <div id='ds' style='width:100%;margin:auto; text-align:center;float:none;overflow:hidden; display:scroll;position:fixed; bottom:0%;z-index:9999'>
          <div><a id='close-ds' onclick='document.getElementById(&apos;ds&apos;).style.display = &apos;none&apos;;' style='cursor:pointer;'><img alt='close' src='https://3.bp.blogspot.com/-ZZSacDHLWlM/VhvlKTMjbLI/AAAAAAAAF2M/UDzU4rrvcaI/s1600/btn_close.gif' title='close button'/></a></div>
     <div style='background-color:#fff; text-align:center;display:block;max-width:100%;height:50px;overflow:auto;margin:auto'>
+
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'a03ccd983783081c32e98687fa158143',
+		'key' : '86f9dc547d859bf1dfadfe7874c96a94',
 		'format' : 'iframe',
 		'height' : 50,
 		'width' : 320,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//evendisciplineseedlings.com/a03ccd983783081c32e98687fa158143/invoke.js"></script>
-<br /><script type="text/javascript">
-	atOptions = {
-		'key' : '624f7847107a10488032a7a551cba5b8',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//evendisciplineseedlings.com/624f7847107a10488032a7a551cba5b8/invoke.js"></script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/86f9dc547d859bf1dfadfe7874c96a94/invoke.js"></script><br /><br />
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'ac9a478c23cd777b121d82c4be9b2966',
-		'format' : 'iframe',
-		'height' : 300,
-		'width' : 160,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//evendisciplineseedlings.com/ac9a478c23cd777b121d82c4be9b2966/invoke.js"></script>
-<script type="text/javascript">
-	atOptions = {
-		'key' : '5fb4250a8668afd9928b28b1f9666ffb',
-		'format' : 'iframe',
-		'height' : 600,
-		'width' : 160,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//evendisciplineseedlings.com/5fb4250a8668afd9928b28b1f9666ffb/invoke.js"></script>
-<script type="text/javascript">
-	atOptions = {
-		'key' : '93c978e1d215bc2856d6c15002f5768a',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//evendisciplineseedlings.com/93c978e1d215bc2856d6c15002f5768a/invoke.js"></script><script type="text/javascript">
-	atOptions = {
-		'key' : '8c3f4c07f4823b0a09c58bd25bf40e7f',
-		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//evendisciplineseedlings.com/8c3f4c07f4823b0a09c58bd25bf40e7f/invoke.js"></script>
-<script type="text/javascript">
-	atOptions = {
-		'key' : '41790db49dd937b4476b9261bfe6c2c3',
+		'key' : '34516c0f4ccbe7a40d6b676b73a99503',
 		'format' : 'iframe',
 		'height' : 50,
 		'width' : 320,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//scheduleginnarcotic.com/41790db49dd937b4476b9261bfe6c2c3/invoke.js"></script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/34516c0f4ccbe7a40d6b676b73a99503/invoke.js"></script>
 <script type="text/javascript">
 	atOptions = {
-		'key' : '8b3c834ed652ac093d7256450645b41e',
+		'key' : '8f6f24ec8d8364c5ced102000f4345df',
 		'format' : 'iframe',
 		'height' : 60,
 		'width' : 468,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//scheduleginnarcotic.com/8b3c834ed652ac093d7256450645b41e/invoke.js"></script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/8f6f24ec8d8364c5ced102000f4345df/invoke.js"></script>
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'c4b64b8f7f8d2ddcbd4a8542265c7c98',
+		'key' : 'f7c699c46a5213929361da9f9cf05b2c',
 		'format' : 'iframe',
 		'height' : 300,
 		'width' : 160,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//scheduleginnarcotic.com/c4b64b8f7f8d2ddcbd4a8542265c7c98/invoke.js"></script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/f7c699c46a5213929361da9f9cf05b2c/invoke.js"></script>
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'fdf01d974a14502985f975dd7f24e731',
+		'key' : '4b2944fa074e68f32057a6d42e575d62',
 		'format' : 'iframe',
 		'height' : 600,
 		'width' : 160,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//scheduleginnarcotic.com/fdf01d974a14502985f975dd7f24e731/invoke.js"></script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/4b2944fa074e68f32057a6d42e575d62/invoke.js"></script>
 <script type="text/javascript">
 	atOptions = {
-		'key' : '4eb89e36bf3831c955ed7258c4e8f7c5',
+		'key' : '2f4aa1ff19c1a434fca0e4a552d0691f',
 		'format' : 'iframe',
 		'height' : 90,
 		'width' : 728,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//scheduleginnarcotic.com/4eb89e36bf3831c955ed7258c4e8f7c5/invoke.js"></script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/2f4aa1ff19c1a434fca0e4a552d0691f/invoke.js"></script>
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'fd91bb4f5f140787a9af421450c422e8',
+		'key' : '0bc82df433d3c39933eea694e5a96439',
 		'format' : 'iframe',
 		'height' : 250,
 		'width' : 300,
 		'params' : {}
 	};
 </script>
-<script type="text/javascript" src="//scheduleginnarcotic.com/fd91bb4f5f140787a9af421450c422e8/invoke.js"></script>
+<script type="text/javascript" src="//evendisciplineseedlings.com/0bc82df433d3c39933eea694e5a96439/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '201333740e88ded0afea641bf1ce171e',
+		'format' : 'iframe',
+		'height' : 50,
+		'width' : 320,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//scheduleginnarcotic.com/201333740e88ded0afea641bf1ce171e/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '41b1c2f5cb6dee516fa5377d1f8460f6',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//scheduleginnarcotic.com/41b1c2f5cb6dee516fa5377d1f8460f6/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '77c3e09218345b3940248ac392ae6ef7',
+		'format' : 'iframe',
+		'height' : 600,
+		'width' : 160,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//scheduleginnarcotic.com/77c3e09218345b3940248ac392ae6ef7/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '13ad2f86ce3bd5c513e2d2b7c96c919a',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//scheduleginnarcotic.com/13ad2f86ce3bd5c513e2d2b7c96c919a/invoke.js"></script>
+<script type="text/javascript">
+	atOptions = {
+		'key' : 'ab1c64f31d3f0bab7109e9dda1c2db72',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//scheduleginnarcotic.com/ab1c64f31d3f0bab7109e9dda1c2db72/invoke.js"></script>
 
 </div></div>
-
 <script type="text/javascript">
    var uid = '342117';
-   var wid = '717034';
+   var wid = '717963';
    var pop_tag = document.createElement('script');pop_tag.src='//cdn.popcash.net/show.js';document.body.appendChild(pop_tag);
    pop_tag.onerror = function() {pop_tag = document.createElement('script');pop_tag.src='//cdn2.popcash.net/show.js';document.body.appendChild(pop_tag)};
 </script>
+
+	
+
+
 
 	
 </body>
